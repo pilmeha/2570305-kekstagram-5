@@ -1,4 +1,4 @@
-import { createIdGenerator, getRandomInteger, getRandomArrayElement } from './util';
+import { createIdGenerator, getRandomInteger, getRandomArrayElement } from './util.js';
 
 const COMMENT_MESSAGES = [
   'Всё отлично!',

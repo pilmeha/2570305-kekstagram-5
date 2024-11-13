@@ -1,5 +1,5 @@
 function createIdGenerator() {
-  let lastGeneratedId = 0;
+  let lastGeneratedId = 1; // тут 1, вместо 0, т.к. имена фотографий начинаются с 1, а не с 0
 
   return function() {
     return lastGeneratedId++;
