@@ -1,1 +1,1 @@
-import './miniaturePicture.js';
+import './renderingPhoto.js';

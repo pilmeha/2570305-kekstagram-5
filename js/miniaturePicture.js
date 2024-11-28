@@ -1,22 +1,21 @@
-import { createArrayPhotos } from './data.js';
-
-const photosData = createArrayPhotos();
-
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
 const picturesFragmetn = document.querySelector('.pictures');
 
+const picturesTitle = document.querySelector('.pictures__title');
+picturesTitle.classList.remove('visually-hidden');
+
 function createMiniPicture(currentPhoto) {
   const clonePicture = pictureTemplate.cloneNode(true);
-  const imgClonePicture = clonePicture.querySelector('.picture__img');
 
+  const imgClonePicture = clonePicture.querySelector('.picture__img');
   imgClonePicture.src = currentPhoto.url;
   imgClonePicture.alt = currentPhoto.description;
 
-  const pictureInfo = clonePicture.querySelector('.picture__info');
-  pictureInfo.querySelector('.picture__likes').textContent = currentPhoto.likes;
-  pictureInfo.querySelector('.picture__comments').textContent = currentPhoto.comments.length;
+  clonePicture.querySelector('.picture__likes').textContent = currentPhoto.likes;
+  clonePicture.querySelector('.picture__comments').textContent = currentPhoto.comments.length;
 
+  clonePicture.dataset.idPicture = currentPhoto.id;
   return clonePicture;
 }
 
@@ -31,5 +30,4 @@ function startCreateMiniPicture(photosArray) {
   picturesFragmetn.appendChild(pictureListFragment);
 }
 
-startCreateMiniPicture(photosData);
-
+export { startCreateMiniPicture };
