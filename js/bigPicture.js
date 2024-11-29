@@ -60,7 +60,7 @@ function openBigPicture(photo) {
   bigPictureCloseForm.addEventListener('click', closeBigPicture);
 
   document.addEventListener('keydown', (evt) => {
-    if (isEscapeKey) {
+    if (isEscapeKey(evt)) {
       evt.preventDefault();
       closeBigPicture();
     }
