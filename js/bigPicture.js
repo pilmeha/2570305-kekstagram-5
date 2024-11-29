@@ -5,8 +5,8 @@ const bigPictureForm = document.querySelector('.big-picture');
 function startCreateBigPicture(photosData) {
   const bigPictureOpenForm = document.querySelector('.pictures');
   bigPictureOpenForm.addEventListener('click', (evt) => {
-    const idPicture = findIdPhoto(evt);
     evt.preventDefault();
+    const idPicture = findIdPhoto(evt);
     const photo = findPhoto(photosData, idPicture);
     openBigPicture(photo);
   });
