@@ -57,7 +57,7 @@ function createArrayPhotos() {
       url: `photos/${photoIdForUrl()}.jpg`,
       description: 'Еще не придумал что здесь написать',
       likes: getRandomInteger(15, 200),
-      comments: createArrayComments(getRandomInteger(1, 30))
+      comments: createArrayComments(getRandomInteger(0, 30))
     };
     photosArray.push(photo);
   }
