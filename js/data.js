@@ -22,6 +22,10 @@ const NAMES = [
 
 const MAX_ID_FOR_PHOTOS = 25;
 
+const MAX_SCALE = 100;
+const MIN_SCALE = 0;
+const STEP_SCALE = 25;
+
 function createArrayComments(count) {
   const commentsArray = [];
   const generateCommentId = createIdGenerator();
@@ -64,4 +68,4 @@ function createArrayPhotos() {
   return photosArray;
 }
 
-export { createArrayPhotos };
+export { createArrayPhotos, MAX_SCALE, MIN_SCALE, STEP_SCALE };

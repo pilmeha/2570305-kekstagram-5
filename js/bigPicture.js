@@ -8,10 +8,10 @@ const COMMENTS_TO_SHOW = 5;
 function startCreateBigPicture(photosData) {
   const bigPictureOpenForm = document.querySelector('.pictures');
   bigPictureOpenForm.addEventListener('click', (evt) => {
-    evt.preventDefault();
     const idPicture = findIdPhoto(evt);
     const photo = findPhoto(photosData, idPicture);
     openBigPicture(photo);
+    evt.preventDefault();
   });
 }
 
